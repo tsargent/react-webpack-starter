@@ -6,7 +6,7 @@ module.exports = merge(common, {
   mode: "production",
   output: {
     path: path.resolve('./dist'),
-    filename: "[name].js",
+    filename: "[name]-[hash].js",
     publicPath: '/',
   },
 });
