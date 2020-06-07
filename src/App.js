@@ -4,7 +4,7 @@ import "./styles.css";
 
 const App = () => (
   <div className="m-8">
-    <h1 className="text-2xl">SWAPI App</h1>
+    <h1 className="text-2xl">Hello world!</h1>
   </div>
 );
 
