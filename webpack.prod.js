@@ -1,9 +1,12 @@
 const merge = require("webpack-merge");
+const path = require("path");
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   mode: "production",
   output: {
-    filename: "[name].js"
+    path: path.resolve('./dist'),
+    filename: "[name].js",
+    publicPath: '/',
   },
 });
