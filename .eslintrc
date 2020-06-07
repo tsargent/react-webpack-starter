@@ -4,8 +4,12 @@
     "eslint:recommended",
     "plugin:prettier/recommended"
   ],
+  "plugins": [
+    "jest"
+  ],
   "env": {
-    "browser": true
+    "browser": true,
+    "jest/globals": true
   },
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
