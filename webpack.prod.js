@@ -11,7 +11,7 @@ module.exports = merge.smart(common, {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
   output: {
-    path: path.resolve('./dist'),
+    path: pah.resolve('./dist'),
     chunkFilename: '[id].js',
     publicPath: '/',
   },
