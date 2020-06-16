@@ -1,17 +1,17 @@
-const path = require("path")
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    "main": path.join(__dirname, "src/main.js")
+    main: path.join(__dirname, 'src/main.js'),
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, "./dist"),
-    publicPath: path.resolve(__dirname, "/"),
+    path: path.resolve(__dirname, './dist'),
+    publicPath: path.resolve(__dirname, '/'),
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist")
+    contentBase: path.join(__dirname, 'dist'),
   },
   module: {
     rules: [
@@ -24,22 +24,18 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
       },
       {
         test: /\.css$/i,
-        use: [
-          'style-loader',
-          'css-loader',
-          'postcss-loader'
-        ],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
-    ],  
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "index.html"),
+      template: path.resolve(__dirname, 'index.html'),
       minify: false,
     }),
-  ]
+  ],
 }

@@ -1,12 +1,12 @@
-const merge = require("webpack-merge");
-const path = require("path");
-const TerserJSPlugin = require('terser-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const common = require('./webpack.common.js');
+const merge = require('webpack-merge')
+const path = require('path')
+const TerserJSPlugin = require('terser-webpack-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const common = require('./webpack.common.js')
 
 module.exports = merge.smart(common, {
-  mode: "production",
+  mode: 'production',
   optimization: {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
@@ -18,7 +18,7 @@ module.exports = merge.smart(common, {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
-    }),    
+    }),
   ],
   module: {
     rules: [
@@ -28,4 +28,4 @@ module.exports = merge.smart(common, {
       },
     ],
   },
-});
+})
